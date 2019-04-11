@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { TodolistComponent } from './todolist/todolist.component';
+import {StorageService} from './services/storage.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { TodolistComponent } from './todolist/todolist.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

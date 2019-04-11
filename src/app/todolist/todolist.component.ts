@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-todolist',
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class TodolistComponent implements OnInit {
   public keyword: string;
   public todolist: any[] = [];
-  constructor() { }
+
+  constructor(public storageService: StorageService) {
+    // console.log(this.storageService.get());
+  }
 
   ngOnInit() {
+    const todolist: any = this.storageService.get('todolist');
+    if (todolist) {
+      this.todolist = todolist;
+    }
   }
 
   doAdd(e) {
@@ -21,21 +29,22 @@ export class TodolistComponent implements OnInit {
           status: 0 // 0表示待办事项 1表示已完成对象
         });
         this.keyword = '';
+
+        this.storageService.set('todolist', this.todolist);
       } else {
         alert('数组已经存在');
         this.keyword = '';
       }
     }
-
   }
 
   deleteData(key) {
     this.todolist.splice(key, 1);
+    this.storageService.set('todolist', this.todolist);
   }
 
   // 如果数组在重复，返回true, 否则返回false
   todolistHasKeyword(todolist, keyword) {
-
     // 异步 会存在问题
     // todolist.forEach(value => {
     //   if (value.title == keyword) {
@@ -43,12 +52,18 @@ export class TodolistComponent implements OnInit {
     //   }
     // });
     console.log(todolist, keyword);
-    if (!keyword) return false;
+    if (!keyword) { return false; }
     for (let i = 0; i < todolist.length; i++) {
       if (todolist[i].title === keyword) {
         return true;
       }
     }
     return false;
+  }
+
+  checkboxChange() {
+    console.log('事件触发了');
+
+    this.storageService.set('todolist', this.todolist)
   }
 }
