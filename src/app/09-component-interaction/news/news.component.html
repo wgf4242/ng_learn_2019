@@ -1,0 +1,12 @@
+<hr>
+<div>我是一个新闻组件</div>
+
+<br>
+<hr>
+
+<app-footer #footer (outer)="run($event)"></app-footer>
+<br>
+
+<button (click)="getChildMsg()">获取子组件的msg</button>
+<br>
+<button (click)="getChildRun()">执行子组件的run方法</button>

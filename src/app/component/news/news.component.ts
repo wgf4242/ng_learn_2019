@@ -1,9 +1,20 @@
 /*
-2. 在业务逻辑里面引入ViewChild
+    ViewChild获取dom节点
 
-3. 写在类里面  @ViewChild('myBox') myBox: any;
+    1、模板中给dom起一个名字
 
-4. ngAfterViewInit生命周期函数里面获取dom
+    <div #myBox>
+        我是一个dom节点
+      </div>
+
+      2、在业务逻辑里面引入ViewChild
+    import { Component, OnInit,ViewChild} from '@angular/core';
+
+    3、 写在类里面    @ViewChild('myBox') myBox:any;
+
+    4、ngAfterViewInit生命周期函数里面获取dom
+
+    this.myBox.nativeElement
 */
 
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
