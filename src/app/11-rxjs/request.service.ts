@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 export class RequestService {
   constructor() {}
 
-  //同步
+  // 同步
   getData() {
     return 'this is service data';
   }
@@ -38,7 +38,7 @@ export class RequestService {
     });
   }
 
-  //多次执行
+  // 多次执行
   getPromiseIntervalData() {
     return new Promise(resolve => {
       setInterval(() => {

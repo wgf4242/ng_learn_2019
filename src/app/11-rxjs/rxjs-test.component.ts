@@ -11,27 +11,27 @@ export class RxjsTestComponent implements OnInit {
   constructor(public request: RequestService) {}
 
   ngOnInit() {
-    //1、同步方法
+    // 1、同步方法
     let data = this.request.getData();
     console.log(data);
 
-    //2、callback获取异步数据
+    // 2、callback获取异步数据
     this.request.getCallbackData(data => {
       console.log(data);
     });
 
-    //3、promise获取异步数据
+    // 3、promise获取异步数据
     var promiseData = this.request.getPromiseData();
     promiseData.then(data => {
       console.log(data);
     });
 
-    //4、rxjs获取异步方法里面的数据
+    // 4、rxjs获取异步方法里面的数据
     // var rxjsData=this.request.getRxjsData();
     // rxjsData.subscribe((data)=>{
     //     console.log(data);
     // })
-    //5、过一秒以后撤回刚才的操作
+    // 5、过一秒以后撤回刚才的操作
     var streem = this.request.getRxjsData();
     var d = streem.subscribe(data => {
       console.log(data);
@@ -40,19 +40,19 @@ export class RxjsTestComponent implements OnInit {
       d.unsubscribe(); /*取消订阅*/
     }, 1000);
 
-    //6、promise 执行多次（没有这个能力）
+    // 6、promise 执行多次（没有这个能力）
     var intervalData = this.request.getPromiseIntervalData();
     intervalData.then(data => {
       console.log(data);
     });
 
-    //7、rxjs执行多次
+    // 7、rxjs执行多次
     // var streemInterval=this.request.getRxjsIntervalData();
     // streemInterval.subscribe((data)=>{
     //     console.log(data);
     // })
 
-    //8、用工具方法对返回的数据进行处理
+    // 8、用工具方法对返回的数据进行处理
     /*
         var streemNum=this.request.getRxjsIntervalNum();
         streemNum.pipe(

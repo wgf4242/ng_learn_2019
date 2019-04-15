@@ -1,4 +1,4 @@
-import { Component,Input} from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 
 @Component({
@@ -11,9 +11,9 @@ import { Component,Input} from '@angular/core';
   <button (click)="changeFlag()">挂载以及卸载组件</button>
   `
 })
-export class LifecycleParentComponent{
+export class LifecycleParentComponent {
   title = 'angulardemo07';
-  public flag:boolean = true;
+  public flag = true;
   changeTitle() { this.title = '改变后的title'; }
   changeFlag() { this.flag = !this.flag; }
 }
@@ -22,21 +22,21 @@ export class LifecycleParentComponent{
   selector: 'app-lifecycle',
   templateUrl: './lifecycle.component.html'
 })
-export class LifecycleComponent{
+export class LifecycleComponent {
 
 
-    @Input('title') title:string;
+    @Input('title') title: string;
 
 
-    public msg:string='我是一个生命周期演示';
+    public msg = '我是一个生命周期演示';
 
-    public userinfo:string='';
+    public userinfo = '';
 
-    public oldUserinfo:string='';
+    public oldUserinfo = '';
 
     constructor() {
 
-      console.log('00构造函数执行了---除了使用简单的值对局部变量进行初始化之外，什么都不应该做')
+      console.log('00构造函数执行了---除了使用简单的值对局部变量进行初始化之外，什么都不应该做');
     }
 
     ngOnChanges() {
@@ -49,15 +49,15 @@ export class LifecycleComponent{
     }
 
     ngDoCheck() {
-        //写一些自定义的操作
+        // 写一些自定义的操作
 
         console.log('03ngDoCheck执行了---检测，并在发生 Angular 无法或不愿意自己检测的变化时作出反应');
-        if(this.userinfo!==this.oldUserinfo){
+        if (this.userinfo !== this.oldUserinfo) {
             console.log(`你从${this.oldUserinfo}改成${this.userinfo}`);
             this.oldUserinfo = this.userinfo;
-        }else{
+        } else {
 
-            console.log("数据没有变化");
+            console.log('数据没有变化');
         }
 
     }
@@ -81,12 +81,12 @@ export class LifecycleComponent{
     }
 
 
-    //自定义方法
+    // 自定义方法
 
-    changeMsg(){
+    changeMsg() {
 
 
-      this.msg="数据改变了";
+      this.msg = '数据改变了';
     }
 
 }
