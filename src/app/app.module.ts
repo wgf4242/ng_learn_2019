@@ -13,6 +13,7 @@ import { HomeComponent } from './09-component-interaction/home/home.component';
 import { HeaderInteractionComponent } from './09-component-interaction/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { NewsInteractionComponent } from './09-component-interaction/news/news.component';
+import { LifecycleComponent, LifecycleParentComponent } from './10-lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { NewsInteractionComponent } from './09-component-interaction/news/news.c
     HomeComponent,
     HeaderInteractionComponent,
     NewsInteractionComponent,
-    FooterComponent
+    FooterComponent,
+    LifecycleComponent,
+    LifecycleParentComponent
   ],
   imports: [
     BrowserModule,
