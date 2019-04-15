@@ -14,6 +14,7 @@ import { HeaderInteractionComponent } from './09-component-interaction/header/he
 import { FooterComponent } from './component/footer/footer.component';
 import { NewsInteractionComponent } from './09-component-interaction/news/news.component';
 import { LifecycleComponent, LifecycleParentComponent } from './10-lifecycle/lifecycle.component';
+import { RxjsTestComponent } from './11-rxjs/rxjs-test.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LifecycleComponent, LifecycleParentComponent } from './10-lifecycle/lif
     NewsInteractionComponent,
     FooterComponent,
     LifecycleComponent,
-    LifecycleParentComponent
+    LifecycleParentComponent,
+    RxjsTestComponent
   ],
   imports: [
     BrowserModule,
