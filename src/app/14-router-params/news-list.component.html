@@ -1,0 +1,34 @@
+<p>
+  news-list works!
+</p>
+
+<h2>get参数传值</h2>
+<ul>
+  <li *ngFor="let number of [1, 2]; let key = index">
+    <a
+      [routerLink]="['/14-router-params/news-detail']"
+      [queryParams]="{ id: key }"
+      routerLinkActive="active"
+      >这是第{{ key }}条数据</a
+    >
+  </li>
+</ul>
+
+<br>
+<hr>
+
+<h2>动态路由</h2>
+<ul>
+  <li *ngFor="let item of [1, 2];let key=index;">
+    <a [routerLink]="[ '/14-router-params/news-detail/', key ]">这是第{{ key }}条数据</a>
+  </li>
+</ul>
+
+<h2>跳转</h2>
+<button (click)="goNewsContent()">js跳转商品详情</button>
+<br>
+<br>
+<button (click)="goHome()">js跳转到首页</button>
+<br>
+<br>
+<button (click)="goNews()">get传值跳转路由</button>

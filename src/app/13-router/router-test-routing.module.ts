@@ -8,6 +8,7 @@ import { HomeComponent } from '../09-component-interaction/home/home.component';
 import { NewsComponent } from '../component/news/news.component';
 import { LifecycleComponent, LifecycleParentComponent } from '../10-lifecycle/lifecycle.component';
 import { AppComponent } from '../app.component';
+import { NewsInteractionComponent } from '../09-component-interaction/news/news.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'path' },
@@ -17,8 +18,9 @@ const routes: Routes = [
   { path: 'app-transition', component: TransitionComponent },
   { path: 'app-home', component: HomeComponent },
   { path: 'app-news', component: NewsComponent },
+  { path: 'app-news-09', component: NewsInteractionComponent },
   { path: 'app-lifecycle', component: LifecycleParentComponent},
-  { path: '**', component: AppComponent }
+  // { path: '**', component: AppComponent },
 ];
 
 @NgModule({

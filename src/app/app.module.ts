@@ -19,6 +19,9 @@ import { HttpTestComponent } from './12-httpclient-test/http-test.component';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { RouterTestModule } from './13-router/router-test.module';
 import { RouterModule } from '@angular/router';
+import { NewsListComponent } from './14-router-params/news-list.component';
+import { NewsDetailComponent } from './14-router-params/news-detail.component';
+import { RouterParamsModule } from './14-router-params/router-params.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { RouterModule } from '@angular/router';
     LifecycleComponent,
     LifecycleParentComponent,
     RxjsTestComponent,
-    HttpTestComponent
+    HttpTestComponent,
+    NewsListComponent,
+    NewsDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,8 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     HttpClientJsonpModule,
     RouterModule,
-    RouterTestModule
+    RouterTestModule,
+    RouterParamsModule
   ],
   providers: [StorageService],
   bootstrap: [AppComponent]
