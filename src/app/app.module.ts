@@ -15,7 +15,10 @@ import { FooterComponent } from './component/footer/footer.component';
 import { NewsInteractionComponent } from './09-component-interaction/news/news.component';
 import { LifecycleComponent, LifecycleParentComponent } from './10-lifecycle/lifecycle.component';
 import { RxjsTestComponent } from './11-rxjs/rxjs-test.component';
-import { HttpTestComponent } from './11-httpclient-test/http-test.component';
+import { HttpTestComponent } from './12-httpclient-test/http-test.component';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { RouterTestModule } from './13-router/router-test.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -33,13 +36,17 @@ import { HttpTestComponent } from './11-httpclient-test/http-test.component';
     LifecycleComponent,
     LifecycleParentComponent,
     RxjsTestComponent,
-    HttpTestComponent,
+    HttpTestComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
+    RouterModule,
+    RouterTestModule
   ],
   providers: [StorageService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

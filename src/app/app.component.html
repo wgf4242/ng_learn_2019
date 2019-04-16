@@ -12,5 +12,14 @@
 <!-- <app-news-09></app-news-09> -->
 
 <!-- <app-lifecycle-parent></app-lifecycle-parent> -->
+<ul>
+  <li><a [routerLink]="[ '/app-search' ]" routerLinkActive="active">app-search</a></li>
+  <li><a [routerLink]="[ '/app-todolist' ]" routerLinkActive="active">app-todolist</a></li>
+  <li><a [routerLink]="[ '/app-dom' ]" routerLinkActive="active">app-dom</a></li>
+  <li><a [routerLink]="[ '/app-transition' ]" routerLinkActive="active">app-transition</a></li>
+  <li><a [routerLink]="[ '/app-home' ]" routerLinkActive="active">app-home</a></li>
+  <li><a [routerLink]="[ '/app-news' ]" routerLinkActive="active">app-news</a></li>
+  <li><a [routerLink]="[ '/app-lifecycle' ]" routerLinkActive="active">app-lifecycle</a></li>
+</ul>
 
-<app-rxjs-test></app-rxjs-test>
+<router-outlet></router-outlet>
