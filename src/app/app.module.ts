@@ -22,6 +22,7 @@ import { RouterModule } from '@angular/router';
 import { NewsListComponent } from './14-router-params/news-list.component';
 import { NewsDetailComponent } from './14-router-params/news-detail.component';
 import { RouterParamsModule } from './14-router-params/router-params.module';
+import { RouteroutletTestModule } from './15-router-outlet/routeroutlet-test.module';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { RouterParamsModule } from './14-router-params/router-params.module';
     HttpClientJsonpModule,
     RouterModule,
     RouterTestModule,
-    RouterParamsModule
+    RouterParamsModule,
+    RouteroutletTestModule
   ],
   providers: [StorageService],
   bootstrap: [AppComponent]
