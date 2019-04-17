@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserComponent } from './user.component';
 
 const routes: Routes = [
-  { path: '17-module-user', component: UserComponent },
+  { path: '', component: UserComponent }
 ];
 
 @NgModule({

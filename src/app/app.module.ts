@@ -23,6 +23,8 @@ import { NewsListComponent } from './14-router-params/news-list.component';
 import { NewsDetailComponent } from './14-router-params/news-detail.component';
 import { RouterParamsModule } from './14-router-params/router-params.module';
 import { RouteroutletTestModule } from './15-router-outlet/routeroutlet-test.module';
+import { UserModule } from './17-modules/user/user.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { RouteroutletTestModule } from './15-router-outlet/routeroutlet-test.mod
     RouterModule,
     RouterTestModule,
     RouterParamsModule,
-    RouteroutletTestModule
+    RouteroutletTestModule,
+    UserModule,
+    AppRoutingModule
   ],
   providers: [StorageService],
   bootstrap: [AppComponent]
