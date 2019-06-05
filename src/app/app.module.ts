@@ -26,6 +26,11 @@ import { RouteroutletTestModule } from './15-router-outlet/routeroutlet-test.mod
 import { UserModule } from './17-modules/user/user.module';
 import { AppRoutingModule } from './app-routing.module';
 import { NavListComponent } from './nav-list/nav-list.component';
+import { AnimationComponent } from './19-animations/animation.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { PopOverComponent } from './19-animations/01-basic-twostate/pop-over.component';
+import {MultiStateAnimationComponent} from './19-animations/02-multi-state/multi-state-animation.component';
+import {KeyFrameAnimationComponent} from './19-animations/03-keyframe-animation/key-frame-animation.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,11 @@ import { NavListComponent } from './nav-list/nav-list.component';
     HttpTestComponent,
     NewsListComponent,
     NewsDetailComponent,
-    NavListComponent
+    NavListComponent,
+    AnimationComponent,
+    PopOverComponent,
+    MultiStateAnimationComponent,
+    KeyFrameAnimationComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +67,8 @@ import { NavListComponent } from './nav-list/nav-list.component';
     RouterParamsModule,
     RouteroutletTestModule,
     UserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
   ],
   providers: [StorageService],
   bootstrap: [AppComponent]

@@ -1,0 +1,45 @@
+import {Component} from '@angular/core';
+
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
+
+enum State {photoState, enlarge, spin}
+
+@Component({
+  templateUrl: './multi-state-animation.component.html',
+  animations: [
+    trigger('photoState', [
+      state('move', style({
+        transform: 'translateX(-100%)',
+      })),
+      state('enlarge',   style({
+        transform: 'scale(1.5)',
+      })),
+      state('spin',   style({
+        transform: 'rotateY(180deg) rotateZ(90deg)',
+      })),
+      transition('* => *', animate('500ms ease')),
+    ])
+  ]})
+export class MultiStateAnimationComponent {
+
+  show = State.photoState;
+
+  constructor() {
+  }
+
+  get stateName() {
+    return State[this.show];
+  }
+
+
+  toggle() {
+    this.show = (this.show + 1) % 3;
+  }
+
+}
