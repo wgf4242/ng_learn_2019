@@ -25,6 +25,7 @@ import { RouterParamsModule } from './14-router-params/router-params.module';
 import { RouteroutletTestModule } from './15-router-outlet/routeroutlet-test.module';
 import { UserModule } from './17-modules/user/user.module';
 import { AppRoutingModule } from './app-routing.module';
+import { NavListComponent } from './nav-list/nav-list.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AppRoutingModule } from './app-routing.module';
     RxjsTestComponent,
     HttpTestComponent,
     NewsListComponent,
-    NewsDetailComponent
+    NewsDetailComponent,
+    NavListComponent
   ],
   imports: [
     BrowserModule,

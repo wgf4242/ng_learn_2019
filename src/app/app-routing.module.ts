@@ -8,9 +8,11 @@ import { HomeComponent } from './09-component-interaction/home/home.component';
 import { NewsComponent } from './component/news/news.component';
 import { NewsInteractionComponent } from './09-component-interaction/news/news.component';
 import { LifecycleParentComponent } from './10-lifecycle/lifecycle.component';
+import {NavListComponent} from './nav-list/nav-list.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'path' },
+  { path: '', pathMatch: 'full', redirectTo: 'nav' },
+  { path: 'nav', component: NavListComponent },
   { path: 'app-search', component: SearchComponent },
   { path: 'app-todolist', component: TodolistComponent },
   { path: 'app-dom', component: DomComponent },

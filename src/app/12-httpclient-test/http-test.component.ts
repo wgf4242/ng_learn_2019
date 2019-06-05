@@ -50,9 +50,9 @@ export class HttpTestComponent implements OnInit {
   }
   getAxiosData() {
     console.log('axios获取数据');
-    let api = 'http://a.itying.com/api/productlist';
-    this.httpService.axiosGet(api).then(data => {
-      console.log(data);
-    });
+    // let api = 'http://a.itying.com/api/productlist';
+    // this.httpService.axiosGet(api).then(data => {
+    //   console.log(data);
+    // });
   }
 }
